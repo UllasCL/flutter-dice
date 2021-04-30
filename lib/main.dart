@@ -33,9 +33,7 @@ class _DicePageState extends State<DicePage> {
         children: [
           Expanded(
             child: TextButton(
-              onPressed: () {
-                setDiceState();
-              },
+              onPressed: _setDiceState,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset('images/dice$leftDiceCount.png'),
@@ -44,9 +42,7 @@ class _DicePageState extends State<DicePage> {
           ),
           Expanded(
             child: TextButton(
-              onPressed: () {
-                setDiceState();
-              },
+              onPressed: _setDiceState,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset('images/dice$rightDiceCount.png'),
@@ -58,7 +54,7 @@ class _DicePageState extends State<DicePage> {
     );
   }
 
-  void setDiceState() {
+  void _setDiceState() {
     setState(() {
       leftDiceCount = Random().nextInt(6) + 1;
       rightDiceCount = Random().nextInt(6) + 1;
