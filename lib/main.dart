@@ -35,8 +35,8 @@ class _DicePageState extends State<DicePage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  leftDiceCount = Random().nextInt(7);
-                  rightDiceCount = Random().nextInt(7);
+                  leftDiceCount = Random().nextInt(6) + 1;
+                  rightDiceCount = Random().nextInt(6) + 1;
                   ;
                 });
               },
@@ -50,8 +50,8 @@ class _DicePageState extends State<DicePage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  leftDiceCount = Random().nextInt(7);
-                  rightDiceCount = Random().nextInt(7);
+                  leftDiceCount = Random().nextInt(6) + 1;
+                  rightDiceCount = Random().nextInt(6) + 1;
                 });
               },
               child: Padding(
